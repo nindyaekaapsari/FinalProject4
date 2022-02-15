@@ -1,0 +1,10 @@
+Repository:
+https://github.com/nindyaekaapsari/FinalProject4
+
+IPYNB File:
+https://github.com/nindyaekaapsari/FinalProject4/blob/main/PYTN_KampusMerdeka_fp4_Nindya%20Eka%20Apsari.ipynb
+Deployment:
+https://github.com/nindyaekaapsari/FinalProject4/tree/main/Model_Deployment
+
+Deployment Heroku:
+https://h8-fp4-customer-segmentation.herokuapp.com/
