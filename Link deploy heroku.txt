@@ -1,0 +1,2 @@
+link deploy heroku
+https://h8-fp4-customer-segmentation.herokuapp.com/
