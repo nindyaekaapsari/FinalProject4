@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H8 Model Deployment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="form">
+        <img src="https://jsday.id/images/sponsors/Logo-Hacktiv8.png" height="100px"/>
+        <h1>Hacktiv8 Final Project 4</h1>
+        <h6>Nindya Eka Apsari</h6>
+        <p>Customer Segmentation</p>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-style-agile">
+            <label>BALANCE</label>
+            <div class="pom-agile">
+                <input placeholder="Balance amount left in account to make purchases" name="BALANCE" type="text" required="">
+            </div>
+            <label>BALANCE FREQUENCY</label>
+            <div class="pom-agile">
+                <input placeholder="0 - 1" name="BALANCE_FREQUENCY" type="text" required="">
+            </div>
+            <label>PURCHASES</label>
+            <div class="pom-agile">
+                <input placeholder="Amount of purchases made from account" name="PURCHASES" type="text" required="">
+            </div>
+            <label>INSTALLMENTS PURCHASES</label>
+            <div class="pom-agile">
+                <input placeholder="Amount of purchase done in installment" name="INSTALLMENTS_PURCHASES" type="text" required="">
+            </div>
+            <label>CASH ADVANCE</label>
+            <div class="pom-agile">
+                <input placeholder=" Cash in advance given by the user" name="CASH_ADVANCE" type="text" required="">
+            </div>
+            <label>PURCHASES FREQUENCY</label>
+            <div class="pom-agile">
+                <input placeholder="0 - 1" name="PURCHASES_FREQUENCY" type="text" required="">
+            </div>
+            <label>ONEOFF PURCHASES FREQUENCY</label>
+            <div class="pom-agile">
+                <input placeholder="0 - 1" name="ONEOFF_PURCHASES_FREQUENCY" type="text" required="">
+            </div>
+            <label>CASH ADVANCE FREQUENCY</label>
+            <div class="pom-agile">
+                <input placeholder="How frequently the cash in advance being paid" name="CASH_ADVANCE_FREQUENCY" type="text" required="">
+            </div>
+            <label>PURCHASES TRX</label>
+            <div class="pom-agile">
+                <input placeholder=" Number of purchase transactions made" name="PURCHASES_TRX" type="text" required="">
+            </div>
+            <label>CREDIT LIMIT</label>
+            <div class="pom-agile">
+                <input placeholder="Limit of Credit Card for user" name="CREDIT_LIMIT" type="text" required="">
+            </div>
+            <label>PAYMENTS</label>
+            <div class="pom-agile">
+                <input placeholder="Amount of Payment done by user" name="PAYMENTS" type="text" required="">
+            </div>
+            <label>MINIMUM PAYMENTS</label>
+            <div class="pom-agile">
+                <input placeholder="Minimum amount of payments made by user" name="MINIMUM_PAYMENTS" type="text" required="">
+            </div>
+            <label>PRC FULL PAYMENT</label>
+            <div class="pom-agile">
+                <input placeholder="Percent of full payment paid by user" name="PRC_FULL_PAYMENT" type="text" required="">
+            </div>
+            <label>TENURE</label>
+            <div class="pom-agile">
+                <input placeholder="Tenure of credit card service for user" name="TENURE" type="text" required="">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Prediksi</button>
+        </form>
+
+
+        <p class="message">{{ prediction_text }}</p>
+        <p class="message">
+            Keterangan Klaster 
+        </p>
+        <p class="message">
+            Klaster 0 : Balance sedang-tinggi, Purchases tinggi, Payments tinggi. </p>
+        <p class="message">
+                Klaster 1 : Balance sedang-tinggi, Purchases dan Payments lebih rendah dari Klaster 0
+        </p> 
+        <p class="message">
+            Klaster 2 : Balance rendah, Purchases rendah, Payments tinggi
+        </p>
+        <p class="message">
+            Klaster 3 : Balance rendah, Purchases dan Payments rendah 
+        </p>
+    </div>
+
+</body>
+</html>
